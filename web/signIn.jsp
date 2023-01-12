@@ -5,6 +5,11 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+<%
+    String loginMessage = "";
+%>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -19,5 +24,8 @@
                <input type="submit" value="submit">
         </form>
         </center>
+    
+        <h2><></h2>
+    
     </body>
 </html>
