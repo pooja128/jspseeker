@@ -8,6 +8,14 @@
 
 <%
     String loginMessage = "";
+    
+    String userName = request.getParameter("name");
+    String password = request.getParameter("password");    
+    
+    if(userName!=""&&password!=""){
+        loginMessage = "Login Failed!"
+    }
+
 %>
 
 <!DOCTYPE html>
@@ -17,15 +25,17 @@
         <title>SignIn</title>
     </head>
     <body>
+        
         <center>
+           <h2> SIGN IN</h2>
         <form action="signIn.jsp">
-               <input type="text" placeholder="Username"><br>
-               <input type="passsword" placeholder="password"><br>               
+               <input name="username" type="text" placeholder="Username"><br>
+               <input name="password" type="passsword" placeholder="password"><br><br>            
                <input type="submit" value="submit">
         </form>
         </center>
     
-        <h2><></h2>
+        <h2><% out.print(loginMessage); %></h2>
     
     </body>
 </html>
